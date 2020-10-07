@@ -5,17 +5,17 @@ export class ContactoModel{
     nombre:string;
     telefono:number;
     fecha_nacimiento:Date;
-    tecnologias:Array<any>=[{
-        angular:false,
-        php:false,
-        sql:false,
-        asp:false,
-        net:false,
-        html:false,
-        javascript:false,
-        python:false,
-        css:false,
-    }];
+    
+    angular:boolean;
+    php:boolean;
+    sql:boolean;
+    asp:boolean;
+    net:boolean;
+    html:boolean;
+    javascript:boolean;
+    python:boolean;
+    css:boolean;
+
     constructor(){
         
     }

@@ -26,11 +26,17 @@
         <td>{{ contacto.nombre}}</td>
         <td>{{ contacto.telefono}}</td>
         <td>{{ contacto.fecha_nacimiento}}</td>
-        <td>{{ contacto.tecnologias}}</td>
-        <!-- <td>
-          <label *ngIf="contacto.vivo" class="badge badge-success">Vivo</label>
-          <label *ngIf="!contacto.vivo"class="badge badge-danger">Muerto</label>
-        </td> -->
+        <td>
+          <label *ngIf="contacto.angular" class="badge badge-success mr-3">Angular</label>
+          <label *ngIf="contacto.php" class="badge badge-success mr-3">PHP</label>
+          <label *ngIf="contacto.sql" class="badge badge-success mr-3">SQL</label>
+          <label *ngIf="contacto.asp" class="badge badge-success mr-3">ASP</label>
+          <label *ngIf="contacto.net" class="badge badge-success mr-3">.NET</label>
+          <label *ngIf="contacto.html" class="badge badge-success mr-3">HTML</label>
+          <label *ngIf="contacto.javascript" class="badge badge-success mr-3">JavaScript</label>
+          <label *ngIf="contacto.python" class="badge badge-success mr-3">Python</label>
+          <label *ngIf="contacto.css" class="badge badge-success mr-3">CSS</label>
+        </td>
         <td>
           <button class="btn btn-info mr-1"
                   [routerLink]="['/contacto',contacto.id]">

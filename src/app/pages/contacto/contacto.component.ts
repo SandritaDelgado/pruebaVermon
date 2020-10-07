@@ -16,7 +16,8 @@ import { ContactosService } from 'src/app/services/contactos.service';
 export class ContactoComponent implements OnInit {
 
   contacto =new ContactoModel();
-  tecnologias:Array<ContactoModel>;
+  
+  
   
 
   constructor(private contactosService:ContactosService,
@@ -31,6 +32,8 @@ export class ContactoComponent implements OnInit {
         this.contacto.id=id;
       });
     }
+
+    
   }
 
   guardar(form:NgForm){
@@ -57,6 +60,8 @@ export class ContactoComponent implements OnInit {
     console.log(this.contacto);
     
   }
+
+ 
 
 
 }

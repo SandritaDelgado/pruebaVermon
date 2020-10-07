@@ -71,15 +71,15 @@
                     <label>Tecnologias</label> 
                     
                     <ul class="checkbox"> 
-                      <li><input type="checkbox" id="cb1" value="Angular" class="mr-3"/><label for="cb1">Angular</label></li> 
-                      <li><input type="checkbox" id="cb2" value="PHP" class="mr-3"/><label for="cb2">PHP</label></li> 
-                      <li><input type="checkbox" id="cb3" value="SQL" class="mr-3"/><label for="cb3">SQL</label></li> 
-                      <li><input type="checkbox" id="cb4" value="ASP" class="mr-3"/><label for="cb4">ASP</label></li> 
-                      <li><input type="checkbox" id="cb5" value=".NET" class="mr-3"/><label for="cb5">.NET</label></li> 
-                      <li><input type="checkbox" id="cb6" value="HTML" class="mr-3"/><label for="cb6>">HTML</label></li> 
-                      <li><input type="checkbox" id="cb7" value="JavaScript" class="mr-3"/><label for="cb7>">JavaScript</label></li> 
-                      <li><input type="checkbox" id="cb8" value="Python" class="mr-3"/><label for="cb8>">Python</label></li> 
-                      <li><input type="checkbox" id="cb9" value="CSS" class="mr-3"/><label for="cb9>">CSS</label></li>
+                      <li><input [(ngModel)]="contacto.angular" #tecnologias="ngModel" name="angular" type="checkbox" id="cb1" value="Angular" class="mr-3"/><label for="cb1">Angular</label></li> 
+                      <li><input [(ngModel)]="contacto.php" #tecnologias="ngModel" name="php" type="checkbox" id="cb2" value="PHP" class="mr-3"/><label for="cb2">PHP</label></li> 
+                      <li><input [(ngModel)]="contacto.sql" #tecnologias="ngModel" name="sql" type="checkbox" id="cb3" value="SQL" class="mr-3"/><label for="cb3">SQL</label></li> 
+                      <li><input [(ngModel)]="contacto.asp" #tecnologias="ngModel" name="asp" type="checkbox" id="cb4" value="ASP" class="mr-3"/><label for="cb4">ASP</label></li> 
+                      <li><input [(ngModel)]="contacto.net" #tecnologias="ngModel" name="net" type="checkbox" id="cb5" value=".NET" class="mr-3"/><label for="cb5">.NET</label></li> 
+                      <li><input [(ngModel)]="contacto.html" #tecnologias="ngModel" name="html" type="checkbox" id="cb6" value="HTML" class="mr-3"/><label for="cb6>">HTML</label></li> 
+                      <li><input [(ngModel)]="contacto.javascript" #tecnologias="ngModel" name="javascript" type="checkbox" id="cb7" value="JavaScript" class="mr-3"/><label for="cb7>">JavaScript</label></li> 
+                      <li><input [(ngModel)]="contacto.python" #tecnologias="ngModel" name="python" type="checkbox" id="cb8" value="Python" class="mr-3"/><label for="cb8>">Python</label></li> 
+                      <li><input [(ngModel)]="contacto.css" #tecnologias="ngModel" name="css" type="checkbox" id="cb9" value="CSS" class="mr-3"/><label for="cb9>">CSS</label></li>
                     </ul> 
                 
                 </section> 
