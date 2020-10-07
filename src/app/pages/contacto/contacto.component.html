@@ -1,0 +1,104 @@
+<h1>Contacto <small>{{contacto.nombre}}</small></h1>
+<hr>
+
+<div class="row text-right">
+    <div class="col">
+        <button class="btn btn-danger" routerLink="/contactos">
+            <i class="fa fa-arrow-left"></i>Regresar
+        </button>
+    </div>
+</div>
+
+
+<div class="row animated fadeIn slow">
+    <div class="col">
+        <form (ngSubmit)="guardar(f)" #f="ngForm">
+            <div class="form-group">
+                <label>Firebase ID</label>
+                <input type="text" 
+                       class="form-control" 
+                       disabled="disabled" 
+                       placeholder="Firebase ID"
+                       [(ngModel)]="contacto.id"
+                       name="id">
+                <small class="form-text text-muted">Este campo es autogenerado</small>
+            </div>
+
+            <div class="form-group">
+                <label>Nombre</label>
+                <input type="text" 
+                       class="form-control" 
+                       placeholder="Nombre del contacto" 
+                       required
+                       [(ngModel)]="contacto.nombre"
+                       name="nombre"
+                       minlength="5"
+                       #nombre="ngModel"> 
+
+                <small *ngIf="nombre.invalid && nombre.touched"
+                       class="form-text text-danger">Formato incorrecto. Minimo 5 letras</small>
+            </div>
+
+            <div class="form-group">
+                <label>Telefono</label>
+                <input type="text" 
+                       class="form-control" 
+                       placeholder="Telefono: xxx-xx-xx-xx"
+                       [(ngModel)]="contacto.telefono"
+                       name="telefono"
+                       pattern="[0-9]{3}-[0-9]{2}-[0-9]{2}-[0-9]{2}"
+                       #telefono="ngModel">
+
+                <small *ngIf="telefono.invalid && telefono.touched"
+                       class="form-text text-danger">Formato incorrecto. Formato valido xxx-xx-xx-xx</small>
+            </div>
+
+
+            <div class="form-group">
+                <label>Fecha_Nacimiento</label>
+                <input type="date" 
+                       class="form-control" 
+                       placeholder="Fecha_Nacimiento"
+                       [(ngModel)]="contacto.fecha_nacimiento"
+                       name="fecha_nacimiento"
+                       #fecha_nacimiento="ngModel">
+
+                <small *ngIf="fecha_nacimiento.invalid && fecha_nacimiento.touched"
+                       class="form-text text-danger">Campo requerido</small>
+            </div>
+
+                <section class="group"> 
+                    <label>Tecnologias</label> 
+                    
+                    <ul class="checkbox"> 
+                      <li><input type="checkbox" id="cb1" value="Angular" class="mr-3"/><label for="cb1">Angular</label></li> 
+                      <li><input type="checkbox" id="cb2" value="PHP" class="mr-3"/><label for="cb2">PHP</label></li> 
+                      <li><input type="checkbox" id="cb3" value="SQL" class="mr-3"/><label for="cb3">SQL</label></li> 
+                      <li><input type="checkbox" id="cb4" value="ASP" class="mr-3"/><label for="cb4">ASP</label></li> 
+                      <li><input type="checkbox" id="cb5" value=".NET" class="mr-3"/><label for="cb5">.NET</label></li> 
+                      <li><input type="checkbox" id="cb6" value="HTML" class="mr-3"/><label for="cb6>">HTML</label></li> 
+                      <li><input type="checkbox" id="cb7" value="JavaScript" class="mr-3"/><label for="cb7>">JavaScript</label></li> 
+                      <li><input type="checkbox" id="cb8" value="Python" class="mr-3"/><label for="cb8>">Python</label></li> 
+                      <li><input type="checkbox" id="cb9" value="CSS" class="mr-3"/><label for="cb9>">CSS</label></li>
+                    </ul> 
+                
+                </section> 
+                
+                    
+
+            
+
+            <hr>
+            <div class="form-group text-center">
+                <button type="submit" class="btn btn-primary w-25">
+                    <i class="fa fa-save"></i>
+                    Guardar
+                </button>
+            </div>
+
+
+
+        </form>
+    </div>
+</div>
+
