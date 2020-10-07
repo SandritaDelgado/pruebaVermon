@@ -6,7 +6,7 @@ export class ContactoModel{
     telefono:number;
     fecha_nacimiento:Date;
     
-    angular:boolean
+    angular:boolean;
     php:boolean;
     sql:boolean;
     asp:boolean;
